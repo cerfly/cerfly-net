@@ -109,6 +109,29 @@ a {
     border-radius: 2px;
 }
 
+/* Language Switch */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.lang-switch span {
+    opacity: 0.4;
+}
+
+.lang-switch a {
+    color: var(--text);
+    opacity: 0.5;
+}
+
+.lang-switch a.active {
+    opacity: 1;
+    color: var(--accent);
+}
+
 /* Theme Toggle */
 .theme-toggle {
     background: none;
