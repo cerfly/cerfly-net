@@ -320,6 +320,38 @@ a {
     margin-bottom: 0.75rem;
 }
 
+/* Blog */
+.post-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-top: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(139, 92, 246, 0.4);
+}
+
+.post-card h2 {
+    margin-bottom: 0.5rem;
+}
+
+.post-card .post-meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+}
+
+.post-card p {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
 /* Now Page */
 .now-items {
     display: flex;
