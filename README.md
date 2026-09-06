@@ -32,6 +32,8 @@ Personal website of cerfly — a self-taught developer learning by building.
 git add -A && git commit -m "..." && git push
 ```
 
+Note: the project deploy as a Workers static-assets app, so `wrangler.toml` configures `not_found_handling = "404-page"` to serve `404.html`.
+
 ## Launch plumbing
 
 - `favicon.svg` — site icon
