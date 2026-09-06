@@ -352,6 +352,15 @@ a {
     margin-bottom: 0.75rem;
 }
 
+.inline-code {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
+    font-family: 'SF Mono', Consolas, monospace;
+    font-size: 0.85em;
+}
+
 /* Now Page */
 .now-items {
     display: flex;

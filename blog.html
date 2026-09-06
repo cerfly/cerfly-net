@@ -43,6 +43,16 @@
                     <p>Most tutorials pretend the author has always known everything. I haven't. I learn by breaking things and reading error messages until they make sense. This blog is my place to record those lessons — honestly, without pretending I have it all figured out.</p>
                     <p>If you're learning too, I hope these notes save you a browser tab or two of searching.</p>
                 </article>
+<article class="post-card">
+                    <h2>How I Put This Site Live: GitHub + Cloudflare Pages</h2>
+                    <p class="post-meta">September 2026 &middot; Deployment</p>
+                    <p>After building this site locally, I needed to put it on the internet — and I wanted the way I update it to be boring and repeatable. One <code class="inline-code">git push</code>, site updates. No ftp, no file managers, no drama. Here's the exact path I took, including the bumps.</p>
+                    <p><strong>Step 1 — Make GitHub trust my machine.</strong> I created an SSH key and added its public half under GitHub Settings &rarr; SSH and GPG keys &rarr; New SSH key, with the type set to <em>Authentication key</em>. (Missing that type means GitHub silently refuses your key.) I verified with <code class="inline-code">ssh -T git@github.com</code> until I saw my username.</p>
+                    <p><strong>Step 2 — Create a repo and push.</strong> I made an empty public repo called <code class="inline-code">cerfly-net</code>, ran <code class="inline-code">git init -b main</code>, committed, added the remote, and pushed with <code class="inline-code">git push -u origin main</code>. Empty is important — a repo pre-seeded with a README means a merge dance I didn't want.</p>
+                    <p><strong>Step 3 — Connect Cloudflare Pages.</strong> In the Cloudflare dashboard: Workers &amp; Pages &rarr; Create application &rarr; connect a repository &rarr; picked the repo. Two settings matter for a static site: build command left <strong>blank</strong>, and build output directory set to <code class="inline-code">/</code>. Hit Save and Deploy, and I had a <code class="inline-code">.pages.dev</code> URL.</p>
+                    <p><strong>Step 4 — Point my domain at it.</strong> My domain was already on Cloudflare's DNS, so in the Pages project I went to Custom domains and added <code class="inline-code">cerfly.net</code>. It refused at first because an old CNAME (<code class="inline-code">cerfly.net &rarr; cerfly.github.io</code> from years ago) was squatting on the name. One record deleted in DNS settings, retried, activate. Done.</p>
+                    <p><strong>The payoff.</strong> Every deploy from now on is <code class="inline-code">git commit</code> &amp; <code class="inline-code">git push</code>. Cloudflare rebuilds, redeploys, and hands back a 200. For a personal site that's the whole loop — and it cost me nothing but patience with one stubborn CNAME record.</p>
+                </article>
             </div>
         </section>
     </main>
