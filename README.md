@@ -12,11 +12,11 @@ Personal website of cerfly — a self-taught developer learning by building.
 
 | Path | Purpose |
 | --- | --- |
-| `/` | Landing page with skills |
+| `/` | Landing page with "right now" updates (personal homepage) |
 | `/about.html` | Self-taught story |
 | `/blog.html` | Blog index (excerpts, unique links per post) |
 | `/posts/<slug>.html` | Individual blog posts |
-| `/portfolio.html` | Projects |
+| `/projects.html` | Projects (things I've built) |
 | `/now.html` | What I'm doing now |
 | `/ai.html` | How I use opencode / AI |
 | `/es/*` | Spanish mirror of the main pages |

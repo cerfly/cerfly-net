@@ -10,6 +10,7 @@
     --text: #e6e6f0;
     --text-secondary: #9a9ab0;
     --border: rgba(255, 255, 255, 0.1);
+    --accent: #6c63ff;
     --gradient: linear-gradient(135deg, #6c63ff, #e056fd, #ff6b9d);
     --glow: rgba(108, 99, 255, 0.25);
     --card-bg: rgba(255, 255, 255, 0.04);
@@ -23,6 +24,7 @@
     --text: #1b1b2f;
     --text-secondary: #55556e;
     --border: rgba(0, 0, 20, 0.1);
+    --accent: #5b50e6;
     --glow: rgba(108, 99, 255, 0.15);
     --card-bg: rgba(255, 255, 255, 0.7);
 }
@@ -261,43 +263,6 @@ a {
     flex: 1;
     height: 1px;
     background: var(--border);
-}
-
-/* Skills */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
-}
-
-.skill-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem;
-    backdrop-filter: blur(10px);
-    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-}
-
-.skill-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(139, 92, 246, 0.4);
-    box-shadow: 0 8px 30px var(--glow);
-}
-
-.skill-card .icon {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.skill-card h3 {
-    font-size: 1rem;
-    margin-bottom: 0.25rem;
-}
-
-.skill-card p {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
 }
 
 /* Page Content */
