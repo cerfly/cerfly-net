@@ -45,6 +45,23 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Chinese pages use a serif (宋体) font stack */
+body:lang(zh-Hans) {
+    font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', 'STSong',
+        'SimSun', 'AR PL UMing CN', 'AR PL UMing SC', 'Noto Serif SC', serif;
+}
+
+.logo:lang(zh-Hans),
+.nav-links:lang(zh-Hans),
+.lang-switch:lang(zh-Hans),
+.theme-toggle:lang(zh-Hans),
+.btn:lang(zh-Hans),
+footer:lang(zh-Hans),
+.read-more:lang(zh-Hans) {
+    font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', 'STSong',
+        'SimSun', 'AR PL UMing CN', 'AR PL UMing SC', 'Noto Serif SC', serif;
+}
+
 a {
     color: var(--text);
     text-decoration: none;
