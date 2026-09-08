@@ -23,8 +23,9 @@ Personal website of cerfly — a self-taught developer learning by building.
 
 ## Deploy
 
-- Hosted on **Cloudflare Pages** at `https://cerfly.net`
+- Hosted on **Cloudflare Pages** at `https://cerfly.net` and `https://www.cerfly.net`
 - Connected to the GitHub repo `cerfly/cerfly-net`
+- `www` is a CNAME record pointing to `cerfly-net.cerfly3319.workers.dev`; SSL and routing handled by Cloudflare (custom domain on the Pages project)
 - Build command: none. Output directory: `/`
 - Every `git push` auto-builds and redeploys:
 
