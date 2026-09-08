@@ -39,7 +39,7 @@
         <section class="page-content">
             <p><a class="back-link" href="/blog.html">&larr; Back to Blog</a></p>
             <h1>GitHub + Cloudflare Pages: Deploy by Push</h1>
-            <p class="post-meta">September 2026 &middot; Deployment</p>
+            <p class="post-meta">Sep 6, 2026 &middot; Deployment</p>
             <p>My goal was boring: one <code class="inline-code">git push</code> updates the site. No FTP, no file managers. Here's the path, including the bumps.</p>
             <p><strong>1. Trust.</strong> Added my SSH key to GitHub as an <em>Authentication key</em> — the wrong type means GitHub silently refuses it. Verified with <code class="inline-code">ssh -T git@github.com</code>.</p>
             <p><strong>2. Push.</strong> Made an <em>empty</em> public repo, then <code class="inline-code">git init -b main && git add . && git commit && git push -u origin main</code>.</p>
