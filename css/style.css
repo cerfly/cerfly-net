@@ -424,6 +424,24 @@ a {
     margin-bottom: 0;
 }
 
+.now-read {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.now-read img {
+    width: 92px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.now-read p {
+    margin-bottom: 0;
+}
+
 /* Projects */
 .projects-grid {
     display: grid;
