@@ -424,22 +424,45 @@ a {
     margin-bottom: 0;
 }
 
-.now-read {
+.now-books {
     display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
 }
 
-.now-read img {
-    width: 92px;
+.now-book summary {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.now-book summary::-webkit-details-marker {
+    display: none;
+}
+
+.now-book summary img {
+    display: block;
+    width: 116px;
     height: auto;
     border-radius: 8px;
     border: 1px solid var(--border);
-    flex-shrink: 0;
+    transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.now-read p {
-    margin-bottom: 0;
+.now-book summary:hover img {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.book-review {
+    margin-top: 0.5rem;
+    max-width: 420px;
+    padding: 0.75rem 0.9rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 /* Projects */
