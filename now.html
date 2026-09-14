@@ -54,22 +54,32 @@
                 <div class="now-item">
                     <h3>&#128214; Reading</h3>
                     <div class="now-books">
-                        <details class="now-book">
-                            <summary><img src="assets/book-4000weeks.jpg" alt="Four Thousand Weeks by Oliver Burkeman"></summary>
-                            <p class="book-review"><em>Four Thousand Weeks</em> — Oliver Burkeman. It sounds like a productivity book, but it's the opposite: Burkeman makes the case that the average life is about 4,000 weeks, that no system will ever get you on top of your inbox, and that the real skill is accepting which things you'll miss. More useful to me than any time-management trick.</p>
-                        </details>
-                        <details class="now-book">
-                            <summary><img src="assets/book-how-to-simplify.jpg" alt="How to Simplify Your Life by Tiki Kustenmacher and Lothar J. Seiwert"></summary>
-                            <p class="book-review"><em>How to Simplify Your Life</em> — Tiki Kustenmacher &amp; Lothar J. Seiwert. Less a philosophy than a checklist: seven areas — things, money, time, health, relationships, partnership, yourself — each with concrete things to let go of. Some of it feels dated, but the habit of asking "does this need to be this complicated?" has stuck with me.</p>
-                        </details>
-                        <details class="now-book">
-                            <summary><img src="assets/book-power-of-habit.jpg" alt="The Power of Habit by Charles Duhigg"></summary>
-                            <p class="book-review"><em>The Power of Habit: Why We Do What We Do and How to Change</em> — Charles Duhigg. Every habit is a loop of cue, routine, reward — and you rarely destroy one; you replace it. Naming that loop is what lets you actually see your own habits instead of just trying harder. Since reading it, I catch more of my automatic behaviour at the cue, before the routine even fires. A small change, but it compounds.</p>
-                        </details>
-                        <details class="now-book">
-                            <summary><img src="assets/book-early-retirement-extreme.jpg" alt="Early Retirement Extreme by Jacob Lund Fisker"></summary>
-                            <p class="book-review"><em>Early Retirement Extreme: A Philosophical and Practical Guide to Financial Independence</em> — Jacob Lund Fisker. The core argument is that your savings rate matters more than your income. Save the typical 10% and you spend roughly nine years working per year of freedom; push it towards 75% and a single working year buys you several years free — independence arrives in 5–10 years instead of 40. The math only works if spending, not earning, is the thing you optimize. But the book's real contribution isn't the number, it's the frame: treat a life as a system to be redesigned, not a budget to be endured. Choices should reinforce each other (live near work, walk or bike, cook from scratch), and skills are the asset you can't inflate away — insource what you pay specialists for. It reads denser than the blog-era money books it spawned, but it's the root they all grow from.</p>
-                        </details>
+                        <button type="button" class="carousel-btn prev" aria-label="Previous books">&#8249;</button>
+                        <div class="book-track">
+                            <button type="button" class="now-book active" data-book="4000weeks" aria-label="Four Thousand Weeks by Oliver Burkeman">
+                                <img src="assets/book-4000weeks.jpg" alt="Four Thousand Weeks by Oliver Burkeman">
+                            </button>
+                            <button type="button" class="now-book" data-book="how-to-simplify" aria-label="How to Simplify Your Life by Tiki Kustenmacher and Lothar J. Seiwert">
+                                <img src="assets/book-how-to-simplify.jpg" alt="How to Simplify Your Life by Tiki Kustenmacher and Lothar J. Seiwert">
+                            </button>
+                            <button type="button" class="now-book" data-book="power-of-habit" aria-label="The Power of Habit by Charles Duhigg">
+                                <img src="assets/book-power-of-habit.jpg" alt="The Power of Habit by Charles Duhigg">
+                            </button>
+                            <button type="button" class="now-book" data-book="early-retirement-extreme" aria-label="Early Retirement Extreme by Jacob Lund Fisker">
+                                <img src="assets/book-early-retirement-extreme.jpg" alt="Early Retirement Extreme by Jacob Lund Fisker">
+                            </button>
+                            <button type="button" class="now-book" data-book="retirement-fail" aria-label="Retirement Fail by Greg Sullivan">
+                                <img src="assets/book-retirement-fail.jpg" alt="Retirement Fail by Greg Sullivan">
+                            </button>
+                        </div>
+                        <button type="button" class="carousel-btn next" aria-label="Next books">&#8250;</button>
+                    </div>
+                    <div class="book-reviews">
+                        <p class="book-review active" id="review-4000weeks"><em>Four Thousand Weeks</em> — Oliver Burkeman. It sounds like a productivity book, but it's the opposite: Burkeman makes the case that the average life is about 4,000 weeks, that no system will ever get you on top of your inbox, and that the real skill is accepting which things you'll miss. More useful to me than any time-management trick.</p>
+                        <p class="book-review" id="review-how-to-simplify"><em>How to Simplify Your Life</em> — Tiki Kustenmacher &amp; Lothar J. Seiwert. Less a philosophy than a checklist: seven areas — things, money, time, health, relationships, partnership, yourself — each with concrete things to let go of. Some of it feels dated, but the habit of asking "does this need to be this complicated?" has stuck with me.</p>
+                        <p class="book-review" id="review-power-of-habit"><em>The Power of Habit: Why We Do What We Do and How to Change</em> — Charles Duhigg. Every habit is a loop of cue, routine, reward — and you rarely destroy one; you replace it. Naming that loop is what lets you actually see your own habits instead of just trying harder. Since reading it, I catch more of my automatic behaviour at the cue, before the routine even fires. A small change, but it compounds.</p>
+                        <p class="book-review" id="review-early-retirement-extreme"><em>Early Retirement Extreme: A Philosophical and Practical Guide to Financial Independence</em> — Jacob Lund Fisker. The core argument is that your savings rate matters more than your income. Save the typical 10% and you spend roughly nine years working per year of freedom; push it towards 75% and a single working year buys you several years free — independence arrives in 5–10 years instead of 40. The math only works if spending, not earning, is the thing you optimize. But the book's real contribution isn't the number, it's the frame: treat a life as a system to be redesigned, not a budget to be endured. Choices should reinforce each other (live near work, walk or bike, cook from scratch), and skills are the asset you can't inflate away — insource what you pay specialists for. It reads denser than the blog-era money books it spawned, but it's the root they all grow from.</p>
+                        <p class="book-review" id="review-retirement-fail"><em>Retirement Fail: The 9 Reasons People Flunk Post-Work Life and How to Ace Your Own</em> — Greg Sullivan. A financial advisor's case that it's rarely the portfolio that sinks a retirement — it's emotional decisions. A vacation home just beyond reach, subsidizing adult kids, skipping the insurance your advisor flagged. Nine common hazards, told through client stories instead of spreadsheets. Read it back-to-back with <em>Early Retirement Extreme</em> and you get the whole picture: the math buys your freedom, but the human decisions decide what you do with it.</p>
                     </div>
                 </div>
                 <div class="now-item">

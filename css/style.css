@@ -426,43 +426,104 @@ a {
 
 .now-books {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.book-track {
+    display: flex;
     gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0.25rem 0.1rem;
+    scrollbar-width: thin;
 }
 
-.now-book summary {
-    list-style: none;
+.book-track::-webkit-scrollbar {
+    height: 6px;
+}
+
+.book-track::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+
+.carousel-btn {
+    flex: 0 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
-    display: inline-block;
+    color: var(--text);
+    font-size: 1.4rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s, border-color 0.15s, opacity 0.15s;
 }
 
-.now-book summary::-webkit-details-marker {
-    display: none;
+.carousel-btn:hover {
+    transform: scale(1.1);
+    border-color: rgba(139, 92, 246, 0.4);
 }
 
-.now-book summary img {
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+    transform: none;
+}
+
+.now-book {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.now-book img {
     display: block;
     width: 116px;
     height: auto;
     border-radius: 8px;
     border: 1px solid var(--border);
-    transition: transform 0.15s, box-shadow 0.15s;
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
 }
 
-.now-book summary:hover img {
+.now-book:hover img {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
+.now-book.active img {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.book-reviews {
+    margin-top: 0.6rem;
+    max-width: 640px;
+}
+
 .book-review {
-    margin-top: 0.5rem;
-    max-width: 420px;
-    padding: 0.75rem 0.9rem;
+    display: none;
+    padding: 0.9rem 1rem;
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 8px;
     color: var(--text-secondary);
     font-size: 0.9rem;
+}
+
+.book-review.active {
+    display: block;
+    animation: fadeInUp 0.25s ease;
 }
 
 /* Projects */
