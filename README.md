@@ -6,7 +6,7 @@ Personal website of cerfly — a self-taught developer learning by building.
 
 - Vanilla HTML + CSS + JavaScript (no frameworks)
 - Dark/light theme toggle: `js/main.js`, persisted in `localStorage`
-- Three languages: English (root), Spanish (`/es/`), and Chinese (`/zh/`), with an EN|ES|中文 switcher in the nav
+- Two languages: English (root) and Chinese (`/zh/`), with an EN|中文 switcher in the nav
 
 ## Pages
 
@@ -19,7 +19,6 @@ Personal website of cerfly — a self-taught developer learning by building.
 | `/projects.html` | Projects (things I've built) |
 | `/now.html` | What I'm doing now |
 | `/ai.html` | How I use opencode / AI |
-| `/es/*` | Spanish mirror of the main pages |
 | `/zh/*` | Chinese mirror of the main pages |
 
 ## Deploy
