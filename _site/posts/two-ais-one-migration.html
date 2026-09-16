@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two AIs, One Migration - cerfly</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="How cerfly&#39;s site moved to Eleventy — a second AI suggested it, opencode built it, and the pages still ship as plain HTML.">
+    <link rel="canonical" href="https://cerfly.net/posts/two-ais-one-migration.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Two AIs, one migration — cerfly">
+    <meta property="og:description" content="How cerfly&#39;s site moved to Eleventy — a second AI suggested it, opencode built it, and the pages still ship as plain HTML.">
+    <meta property="og:url" content="https://cerfly.net/posts/two-ais-one-migration.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Two AIs, one migration — cerfly">
+    <meta name="twitter:description" content="How cerfly&#39;s site moved to Eleventy — a second AI suggested it, opencode built it, and the pages still ship as plain HTML.">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">cerfly</a>
+        <ul class="nav-links">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/ai.html" >AI</a></li>
+            <li><a href="/about.html" >About</a></li>
+            <li><a href="/blog.html" class="active">Blog</a></li>
+            <li><a href="/projects.html" >Projects</a></li>
+            <li><a href="/now.html" >Now</a></li>
+            
+            <li>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="icon-moon">&#9790;</span>
+                    <span class="icon-sun">&#9728;</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-content">
+            <p><a class="back-link" href="/blog.html">&larr; Back to Blog</a></p>
+            <h1>Two AIs, One Migration</h1>
+            <p class="post-meta">Sep 16, 2026 &middot; Building</p>
+<p>The idea for this wasn't mine — it was Claude's. In a planning session it said the highest-leverage change left was moving the site to a static site generator: I'd already tripped over the nav-sync bug twice, and every new page made keeping language versions in sync by hand harder. A shared template would end it permanently.</p>
+<p>opencode and I did the work. The main steps:</p>
+<ol>
+<li><strong>Install:</strong> <code>npm install --save-dev @11ty/eleventy</code>; configure <code>.eleventy.js</code> to read <code>src/</code> and output <code>_site/</code>.</li>
+<li><strong>Templates:</strong> one shared layout per language in <code>src/_includes/</code> for the nav and footer; each page becomes a template with a <code>permalink</code> that keeps the old <code>.html</code> URLs.</li>
+<li><strong>Blog:</strong> posts are Markdown in <code>src/posts/</code> with a date and category; the index builds itself from the <code>post</code> collection.</li>
+<li><strong>Build:</strong> <code>npm run build</code> writes everything to <code>_site/</code>; <code>npm run serve</code> live-previews at <code>localhost:8080</code>.</li>
+<li><strong>Deploy:</strong> <code>wrangler.toml</code> now serves <code>./_site</code>; the generated <code>_site/</code> is committed, so <code>git push</code> still ships the site.</li>
+</ol>
+<p>What didn't change matters more. The pages the browser loads are still plain HTML — same CSS, same JavaScript, same URLs. Eleventy is a build tool, not a runtime framework, so the &quot;no frameworks&quot; spirit survives. The difference is pages get assembled instead of pasted.</p>
+<p>The honest footnote: this site is written by opencode and steered by me — and the migration idea came from Claude. Three parties, one tiny website. It's true, so the site says so.</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/cerfly" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:hello@cerfly.net">Email</a>
+        </div>
+        <p>&copy; 2026 cerfly.net</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
