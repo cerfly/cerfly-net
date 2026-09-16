@@ -1,0 +1,24 @@
+{
+  "name": "cerfly-net",
+  "version": "1.0.0",
+  "description": "Personal website of cerfly — a self-taught developer learning by building.",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerfly/cerfly-net.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cerfly/cerfly-net/issues"
+  },
+  "homepage": "https://github.com/cerfly/cerfly-net#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

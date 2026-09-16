@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现在</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="cerfly 最近在忙什么：搭建 cerfly.net、学西班牙语。">
+    <link rel="canonical" href="https://cerfly.net/zh/now.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="现在 — cerfly">
+    <meta property="og:description" content="cerfly 最近在忙什么：搭建 cerfly.net、学西班牙语。">
+    <meta property="og:url" content="https://cerfly.net/zh/now.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="现在 — cerfly">
+    <meta name="twitter:description" content="cerfly 最近在忙什么：搭建 cerfly.net、学西班牙语。">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/zh/" class="logo">cerfly</a>
+        <ul class="nav-links">
+            <li><a href="/zh/" >首页</a></li>
+            <li><a href="/zh/ai.html" >AI</a></li>
+            <li><a href="/zh/about.html" >关于</a></li>
+            <li><a href="/zh/blog.html" >博客</a></li>
+            <li><a href="/zh/projects.html" >项目</a></li>
+            <li><a href="/zh/now.html" class="active">现在</a></li>
+            <li class="lang-switch"><a href="/now.html">EN</a> <span>/</span> <a href="/zh/now.html" class="active">中文</a></li>
+            <li>
+                <button class="theme-toggle" aria-label="切换主题">
+                    <span class="icon-moon">&#9790;</span>
+                    <span class="icon-sun">&#9728;</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-content">
+            <h1>最近在忙什么</h1>
+            <p>最后更新：2026 年 9 月</p>
+
+            <div class="now-items">
+                <div class="now-item">
+                    <h3>&#128187; 搭建 cerfly.net</h3>
+                    <p>用 opencode 搭这个网站——纯 HTML、CSS、JS，不搞框架，不整花活。</p>
+                </div>
+                <div class="now-item">
+                    <h3>&#129302; 学西班牙语</h3>
+                    <p>一天一天地学：几个新单词、一些听力、一点点开口说。很慢，但积累是真的。</p>
+                </div>
+                <div class="now-item">
+                    <h3>&#128214; 在读</h3>
+                    <div class="book-carousel">
+                        <button type="button" class="carousel-btn prev" aria-label="上一本">&#8249;</button>
+                        <div class="book-stage">
+                            <button type="button" class="now-book active" data-book="4000weeks" aria-label="《四千周》奥利弗·伯克曼">
+                                <img src="/assets/book-4000weeks.jpg" alt="《四千周》奥利弗·伯克曼">
+                            </button>
+                            <button type="button" class="now-book" data-book="how-to-simplify" aria-label="《如何简化你的人生》蒂基·库斯特马赫、洛塔尔·塞韦特">
+                                <img src="/assets/book-how-to-simplify.jpg" alt="《如何简化你的人生》蒂基·库斯特马赫、洛塔尔·塞韦特">
+                            </button>
+                            <button type="button" class="now-book" data-book="power-of-habit" aria-label="《习惯的力量》查尔斯·都希格">
+                                <img src="/assets/book-power-of-habit.jpg" alt="《习惯的力量》查尔斯·都希格">
+                            </button>
+                            <button type="button" class="now-book" data-book="early-retirement-extreme" aria-label="《极简提前退休》（Early Retirement Extreme）雅各布·伦德·菲斯克">
+                                <img src="/assets/book-early-retirement-extreme.jpg" alt="《极简提前退休》（Early Retirement Extreme）雅各布·伦德·菲斯克">
+                            </button>
+                            <button type="button" class="now-book" data-book="retirement-fail" aria-label="《退休失败》（Retirement Fail）格雷格·沙利文">
+                                <img src="/assets/book-retirement-fail.jpg" alt="《退休失败》（Retirement Fail）格雷格·沙利文">
+                            </button>
+                        </div>
+                        <button type="button" class="carousel-btn next" aria-label="下一本">&#8250;</button>
+                    </div>
+                    <div class="book-reviews">
+                        <p class="book-review active" id="review-4000weeks">《四千周》（Four Thousand Weeks），奥利弗·伯克曼。光看书名像本效率手册，其实正相反：伯克曼说人的一生大约就四千个星期，再好的系统也清不完你的收件箱，真正该练的，是坦然接受你会错过什么。这句话比任何时间管理技巧都有用。</p>
+                        <p class="book-review" id="review-how-to-simplify">《如何简化你的人生》—— 蒂基·库斯特马赫、洛塔尔·塞韦特。与其说是哲学，不如说是一份清单：物品、金钱、时间、健康、关系、伴侣、你自己，七个方面，每一条都有可以放下的具体做法。有些地方已经有点过时，但「这件事真的需要搞得这么复杂吗」这个习惯，我留下来了。</p>
+                        <p class="book-review" id="review-power-of-habit">《习惯的力量：为什么我们这样生活，那样工作》——查尔斯·都希格。书里最重要的观点其实很朴素：每个习惯都是一条「提示—行为—奖赏」的回路。问题往往不在意志力，而在回路本身——习惯几乎不会被戒掉，只能被替换：留住提示，保住奖赏，把中间的行为换成新的。读完以后，我很少再逼自己「坚持」，反而更多去观察：这件事的提示是什么，我真正想要的是那点奖赏吗？反应慢下来半拍，改变就开始发生了。</p>
+                        <p class="book-review" id="review-early-retirement-extreme">《极简提前退休：通往财务独立的一本哲学与实用指南》（Early Retirement Extreme）——雅各布·伦德·菲斯克。全书的核心观点是：储蓄率比收入更重要。按常见的 10% 储蓄率，你要工作九年才换得一年自由；把储蓄率提到 75% 左右，工作一年就能换来几年自由——财务独立不是 40 年后的事，而是 5–10 年后的事。这套算术成立的前提是，你要优化的不是挣得更多，而是花得更少。但这本书真正的贡献不是那个数字，而是它的框架：把生活当作一个可以重新设计的系统，而不是一份咬牙硬撑的预算。各项选择应当互相成全（住在离工作近的地方、走路或骑车代替开车、自己做饭），而技能是永远贬不了值的资产——把以前花钱请人做的事，自己学回来。它读起来比后来那些博客时代的理财书更密、也更早，但它们是它的根长出来的。</p>
+                        <p class="book-review" id="review-retirement-fail">《退休失败：人们搞砸退休生活的九个原因》（Retirement Fail）——格雷格·沙利文。一位理财顾问的观点：毁掉退休生活的，通常不是投资收益差，而是情绪化的决定——够不着的度假屋、无度地补贴成年子女、跳过顾问反复提醒过的雨伞保险。九个常见的坑，讲的是真实客户的故事，而不是冷冰冰的报表。和《极简提前退休》连着读正好补全整张图：数学帮你换来自由，但最终怎么用这份自由，取决于人的决定。</p>
+                    </div>
+                </div>
+                <div class="now-item">
+                    <h3>&#128736; 工具与技术栈</h3>
+                    <p>Linux Mint 打底，VS Code 写代码，git 管版本，opencode 当 AI 编程搭档。这个网站是纯 HTML/CSS/JS，脚本和自动化用 Python。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/cerfly" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:hello@cerfly.net">Email</a>
+        </div>
+        <p>&copy; 2026 cerfly.net</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

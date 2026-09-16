@@ -1,0 +1,22 @@
+---
+layout: en-base.njk
+title: Blog
+description: Short, honest posts about building this site with opencode.
+nav: blog
+enUrl: /blog.html
+zhUrl: /zh/blog.html
+permalink: /blog.html
+---
+        <section class="page-content">
+            <h1>Blog</h1>
+            <div class="blog-posts">
+                {%- for post in collections.post | reverse %}
+                <article class="post-card">
+                    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                    <p class="post-meta">{{ post.date | dateEn }} &middot; {{ post.data.category }}</p>
+                    <p>{{ post.data.excerpt }}</p>
+                    <p><a class="read-more" href="{{ post.url }}">Read more &rarr;</a></p>
+                </article>
+                {% endfor -%}
+            </div>
+        </section>

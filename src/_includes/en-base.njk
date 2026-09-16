@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ headTitle or (title + " - cerfly") }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="https://cerfly.net{{ page.url }}">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    {% if noindex %}<meta name="robots" content="noindex">{% endif %}
+    {% if not noindex %}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ ogTitle or title }} — cerfly">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="https://cerfly.net{{ page.url }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ twitterTitle or ogTitle or title }} — cerfly">
+    <meta name="twitter:description" content="{{ description }}">
+    {% endif %}
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">cerfly</a>
+        <ul class="nav-links">
+            <li><a href="/" {% if nav == 'home' %}class="active"{% endif %}>Home</a></li>
+            <li><a href="/ai.html" {% if nav == 'ai' %}class="active"{% endif %}>AI</a></li>
+            <li><a href="/about.html" {% if nav == 'about' %}class="active"{% endif %}>About</a></li>
+            <li><a href="/blog.html" {% if nav == 'blog' %}class="active"{% endif %}>Blog</a></li>
+            <li><a href="/projects.html" {% if nav == 'projects' %}class="active"{% endif %}>Projects</a></li>
+            <li><a href="/now.html" {% if nav == 'now' %}class="active"{% endif %}>Now</a></li>
+            {% if zhUrl %}<li class="lang-switch"><a href="{{ enUrl }}" class="active">EN</a> <span>/</span> <a href="{{ zhUrl }}">中文</a></li>{% endif %}
+            <li>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="icon-moon">&#9790;</span>
+                    <span class="icon-sun">&#9728;</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+{{ content | safe }}
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/cerfly" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:hello@cerfly.net">Email</a>
+        </div>
+        <p>&copy; 2026 cerfly.net</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

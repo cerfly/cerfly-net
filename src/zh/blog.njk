@@ -1,0 +1,25 @@
+---
+layout: zh-base.njk
+title: 博客
+ogTitle: 博客 — cerfly
+twitterTitle: 博客 — cerfly
+description: 记录这个网站和 opencode 一起构建的过程，简短而真实。
+nav: blog
+enUrl: /blog.html
+zhUrl: /zh/blog.html
+permalink: /zh/blog.html
+---
+        <section class="page-content">
+            <h1>博客</h1>
+            <p class="post-meta">文章目前是英文，中文版后面会陆续补上。</p>
+            <div class="blog-posts">
+                {%- for post in collections.post | reverse %}
+                <article class="post-card">
+                    <h2><a href="{{ post.url }}">{{ post.data.zhTitle or post.data.title }}</a></h2>
+                    <p class="post-meta">{{ post.date | dateZh }} &middot; {{ post.data.zhCategory or post.data.category }}</p>
+                    <p>{{ post.data.zhExcerpt or post.data.excerpt }}</p>
+                    <p><a class="read-more" href="{{ post.url }}">阅读原文 &rarr;</a></p>
+                </article>
+                {% endfor -%}
+            </div>
+        </section>

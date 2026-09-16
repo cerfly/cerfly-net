@@ -1,0 +1,10 @@
+---
+layout: en-base.njk
+nav: blog
+---
+        <section class="page-content">
+            <p><a class="back-link" href="/blog.html">&larr; Back to Blog</a></p>
+            <h1>{{ title }}</h1>
+            <p class="post-meta">{{ date | dateEn }} &middot; {{ category }}</p>
+{{ content | safe }}
+        </section>
