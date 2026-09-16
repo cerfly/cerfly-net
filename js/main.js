@@ -23,44 +23,46 @@
     }
 })();
 
-// Reading carousel: click a cover to show its review, no layout shift
+// Book carousel: one full cover at a time, arrows hide at the ends
 (function () {
-    const tracks = document.querySelectorAll('.book-track');
+    const carousels = document.querySelectorAll('.book-carousel');
 
-    tracks.forEach((track) => {
-        const books = track.querySelectorAll('.now-book');
+    carousels.forEach((carousel) => {
+        const stage = carousel.querySelector('.book-stage');
+        const books = Array.from(stage.querySelectorAll('.now-book'));
         const reviews = document.querySelectorAll('.book-reviews .book-review');
-        const prevBtn = track.parentElement.querySelector('.carousel-btn.prev');
-        const nextBtn = track.parentElement.querySelector('.carousel-btn.next');
+        const prevBtn = carousel.querySelector('.carousel-btn.prev');
+        const nextBtn = carousel.querySelector('.carousel-btn.next');
+        let index = books.findIndex((b) => b.classList.contains('active'));
+        if (index < 0) index = 0;
+
+        function render() {
+            books.forEach((book, bi) => {
+                const offset = bi - index;
+                book.classList.toggle('active', offset === 0);
+                book.style.transform = offset === 0
+                    ? 'none'
+                    : `translateX(${offset < 0 ? '-' : ''}${Math.abs(offset) === 1 ? 110 : 220}%)`;
+                book.style.opacity = offset === 0 ? '1' : '0';
+            });
+            reviews.forEach((review) => {
+                review.classList.toggle('active', review.id === 'review-' + books[index].dataset.book);
+            });
+            updateButtons();
+        }
 
         function updateButtons() {
-            const maxScroll = track.scrollWidth - track.clientWidth;
-            if (prevBtn) prevBtn.disabled = track.scrollLeft <= 0;
-            if (nextBtn) nextBtn.disabled = track.scrollLeft >= maxScroll - 1;
+            if (prevBtn) prevBtn.classList.toggle('hidden', index <= 0);
+            if (nextBtn) nextBtn.classList.toggle('hidden', index >= books.length - 1);
         }
 
-        function scrollByBook(dir) {
-            const book = books[0];
-            const step = book ? book.offsetWidth + 20 : 140;
-            track.scrollBy({ left: dir * step, behavior: 'smooth' });
-        }
-
-        if (prevBtn) prevBtn.addEventListener('click', () => scrollByBook(-1));
-        if (nextBtn) nextBtn.addEventListener('click', () => scrollByBook(1));
-
-        track.addEventListener('scroll', updateButtons, { passive: true });
-        window.addEventListener('resize', updateButtons);
-        updateButtons();
-
-        books.forEach((book) => {
-            book.addEventListener('click', () => {
-                books.forEach((b) => b.classList.remove('active'));
-                book.classList.add('active');
-                const id = 'review-' + book.dataset.book;
-                reviews.forEach((review) => {
-                    review.classList.toggle('active', review.id === id);
-                });
-            });
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+            if (index > 0) { index -= 1; render(); }
         });
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+            if (index < books.length - 1) { index += 1; render(); }
+        });
+
+        render();
     });
 })();

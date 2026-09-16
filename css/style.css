@@ -424,30 +424,52 @@ a {
     margin-bottom: 0;
 }
 
-.now-books {
+.book-carousel {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
     margin-top: 0.25rem;
 }
 
-.book-track {
-    display: flex;
-    gap: 1.25rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding: 0.25rem 0.1rem;
-    scrollbar-width: thin;
+.book-stage {
+    position: relative;
+    width: 172px;
+    height: 248px;
+    overflow: hidden;
+    background: var(--card-bg);
+    border-radius: 8px;
 }
 
-.book-track::-webkit-scrollbar {
-    height: 6px;
+.now-book {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.35s ease;
 }
 
-.book-track::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 3px;
+.now-book.active {
+    opacity: 1;
+}
+
+.now-book img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.now-book:hover img {
+    transform: scale(1.02);
 }
 
 .carousel-btn {
@@ -464,7 +486,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.15s, border-color 0.15s, opacity 0.15s;
+    transition: transform 0.15s, border-color 0.15s, opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .carousel-btn:hover {
@@ -472,38 +494,10 @@ a {
     border-color: rgba(139, 92, 246, 0.4);
 }
 
-.carousel-btn:disabled {
-    opacity: 0.3;
-    cursor: default;
-    transform: none;
-}
-
-.now-book {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-}
-
-.now-book img {
-    display: block;
-    width: 116px;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
-}
-
-.now-book:hover img {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-}
-
-.now-book.active img {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 2px var(--accent);
+.carousel-btn.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .book-reviews {
