@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library Loan Tracker - cerfly</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="Two small projects that read Shenzhen&#39;s library sites for me — a loan tracker CLI and a borrow-history dashboard skill. Reversed, read-only, and kept simple.">
+    <link rel="canonical" href="https://cerfly.net/posts/my-library-loan-tracker.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My library loan tracker — cerfly">
+    <meta property="og:description" content="Two small projects that read Shenzhen&#39;s library sites for me — a loan tracker CLI and a borrow-history dashboard skill. Reversed, read-only, and kept simple.">
+    <meta property="og:url" content="https://cerfly.net/posts/my-library-loan-tracker.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="My library loan tracker — cerfly">
+    <meta name="twitter:description" content="Two small projects that read Shenzhen&#39;s library sites for me — a loan tracker CLI and a borrow-history dashboard skill. Reversed, read-only, and kept simple.">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">cerfly</a>
+        <ul class="nav-links">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/ai.html" >AI</a></li>
+            <li><a href="/about.html" >About</a></li>
+            <li><a href="/blog.html" class="active">Blog</a></li>
+            <li><a href="/projects.html" >Projects</a></li>
+            <li><a href="/now.html" >Now</a></li>
+            
+            <li>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="icon-moon">&#9790;</span>
+                    <span class="icon-sun">&#9728;</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-content">
+            <p><a class="back-link" href="/blog.html">&larr; Back to Blog</a></p>
+            <h1>My Library Loan Tracker</h1>
+            <p class="post-meta">Sep 20, 2026 &middot; Projects</p>
+<p>Shenzhen's libraries don't offer public APIs — and they don't even share a system — so this became two small projects, both packaged as opencode skills:</p>
+<p><strong>The loan tracker.</strong> A command-line tool that checks all my reader accounts in one go: what's currently borrowed, due dates, and locations, with overdue books flagged right in the table. Each run writes a dated JSON/CSV snapshot, and a companion command lists past snapshots so I can look back at my reading history. Credentials are encrypted on disk (the passphrase lives in a <code>chmod 600</code> key file), account numbers are masked everywhere they might reach a file or screen, and a scheduler keeps it running on its own.</p>
+<p><strong>The history dashboard.</strong> The other system keeps a fuller reading ledger, guarded by a captcha login. Its skill logs me in by reading the captcha automatically, pulls months of borrow history, and computes simple statistics like monthly trends and top categories. That becomes two outputs: a Markdown report and a single-file HTML dashboard with the charting library inlined, so it opens anywhere with nothing to install.</p>
+<p>Being packaged as skills means the know-how is written down, not just in my head. opencode can re-run a check, regenerate the dashboard, or fix a script when an endpoint shifts — which they do — without me re-teaching everything from scratch.</p>
+<p>The lesson I keep re-learning: the most interesting code hides in the most ordinary problems. Nobody needs a trendy API to justify the fiddling — overdue books are enough. And as always on this site: opencode writes the code, I read it before I keep it.</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/cerfly" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:hello@cerfly.net">Email</a>
+        </div>
+        <p>&copy; 2026 cerfly.net</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
