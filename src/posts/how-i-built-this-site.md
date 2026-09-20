@@ -15,6 +15,6 @@ permalink: /posts/how-i-built-this-site.html
 ---
 Every line of code in this site was written by opencode — vanilla HTML, CSS, and JavaScript, no template, no framework. My part was the suggestions and the review. I wanted to understand what I'm shipping; if I don't know how it works, I can't fix it when it breaks.
 
-**opencode**, the AI assistant that sits in my terminal, wrote the code and explained why. I read every line before keeping it — the curve is gentler, and the understanding is still mine.
+**opencode**, the AI assistant that sits in my terminal, wrote the code and explained what it was doing — and why. I won't claim I read every line, but reading its code as it works is the part I've come to enjoy most, and the understanding is still mine to build.
 
-Learning this way has worked for me — as long as I don't let the tool replace understanding. I read the docs, break things on purpose, and keep only what I can explain.
+Learning this way has worked for me — as long as I don't let the tool replace understanding. I read the docs, break things on purpose, and keep what I can explain.
