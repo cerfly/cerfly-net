@@ -1,0 +1,37 @@
+<svg viewBox="0 0 600 400" role="img" aria-label="Terminal window showing the PvZ-sync save export, then the EA online reset warning" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="400" fill="#0a0a12"/>
+    <!-- terminal chrome -->
+    <rect x="0" y="0" width="600" height="36" fill="#12121e"/>
+    <rect x="0" y="35" width="600" height="1" fill="#1c1c2a"/>
+    <circle cx="20" cy="18" r="5" fill="#ff5f56"/>
+    <circle cx="38" cy="18" r="5" fill="#ffbd2e"/>
+    <circle cx="56" cy="18" r="5" fill="#27c93f"/>
+    <text x="300" y="23" text-anchor="middle" font-family="monospace" font-size="12" fill="#55556e">pvz-sync — save export / restore</text>
+    <!-- terminal body -->
+    <g font-family="monospace" font-size="12">
+        <text x="40" y="70" fill="#6c63ff">$</text>
+        <text x="56" y="70" fill="#e6e6f0">./export-save.sh</text>
+        <text x="40" y="96" fill="#27c93f">✓</text>
+        <text x="56" y="96" fill="#9a9ab0">pulled No_Backup → User Dave #1771293681</text>
+        <text x="40" y="122" fill="#6c63ff">$</text>
+        <text x="56" y="122" fill="#e6e6f0">./import-save.sh</text>
+        <text x="40" y="148" fill="#27c93f">✓</text>
+        <text x="56" y="148" fill="#9a9ab0">restored to tablet · first boot offline ok</text>
+        <!-- warning -->
+        <rect x="36" y="168" width="528" height="60" rx="6" fill="#2a1216"/>
+        <text x="44" y="190" fill="#ff5f56">⚠ 20s into online boot (new device):</text>
+        <text x="44" y="212" fill="#ff8fa3">profile reset to 0 coins / 0 gems</text>
+        <text x="40" y="252" fill="#e6e6f0">cause: EA keys progress to per-install GUID</text>
+        <text x="40" y="272" fill="#9a9ab0">GUID lives in private storage — not in save files</text>
+        <text x="40" y="300" fill="#e056fd">→ not file-fixable · documented, not deployed</text>
+    </g>
+    <!-- gradient bar -->
+    <rect x="0" y="395" width="600" height="5" fill="url(#grad)"/>
+    <defs>
+        <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#6c63ff"/>
+            <stop offset="50%" stop-color="#e056fd"/>
+            <stop offset="100%" stop-color="#27c93f"/>
+        </linearGradient>
+    </defs>
+</svg>

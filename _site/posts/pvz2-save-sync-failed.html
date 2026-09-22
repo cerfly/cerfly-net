@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Save That Wouldn&#39;t Travel: How My PvZ 2 Sync Failed - cerfly</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="description" content="I tried to back up a Plants vs. Zombies 2 save with git so it could survive a device change. The files copied fine. Then EA&#39;s servers reset the profile anyway. Here&#39;s what I learned.">
+    <link rel="canonical" href="https://cerfly.net/posts/pvz2-save-sync-failed.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The save that wouldn&#39;t travel — cerfly">
+    <meta property="og:description" content="I tried to back up a Plants vs. Zombies 2 save with git so it could survive a device change. The files copied fine. Then EA&#39;s servers reset the profile anyway. Here&#39;s what I learned.">
+    <meta property="og:url" content="https://cerfly.net/posts/pvz2-save-sync-failed.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The save that wouldn&#39;t travel — cerfly">
+    <meta name="twitter:description" content="I tried to back up a Plants vs. Zombies 2 save with git so it could survive a device change. The files copied fine. Then EA&#39;s servers reset the profile anyway. Here&#39;s what I learned.">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="logo">cerfly</a>
+        <ul class="nav-links">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/ai.html" >AI</a></li>
+            <li><a href="/about.html" >About</a></li>
+            <li><a href="/blog.html" class="active">Blog</a></li>
+            <li><a href="/projects.html" >Projects</a></li>
+            <li><a href="/now.html" >Now</a></li>
+            
+            <li>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="icon-moon">&#9790;</span>
+                    <span class="icon-sun">&#9728;</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="page-content">
+            <p><a class="back-link" href="/blog.html">&larr; Back to Blog</a></p>
+            <h1>The Save That Wouldn&#39;t Travel: How My PvZ 2 Sync Failed</h1>
+            <p class="post-meta">Sep 23, 2026 &middot; Projects</p>
+<p>PvZ 2 doesn't offer a plain save file you can pick up and move. When the game runs without an EA, Google, or Apple account, there's no cloud save at all — the whole profile just lives in one folder on the phone. So I thought: fine, back it up myself.</p>
+<p>The plan was simple. Android's <code>No_Backup</code> folder holds <code>pp.dat</code>, the snapshots, the quest state, everything. A small <code>adb</code> script pulls those files into a git repo, a matching script pushes them back onto another device. No cloud, no accounts, no money. My profile &quot;User Dave&quot; would survive any device change.</p>
+<p><strong>And it worked — offline.</strong></p>
+<p>Export from the phone, import to a tablet, boot the game with the network off, and there it is: 114,990 coins, 1,682 gems, all 76 plants. The files genuinely carry everything. I even wrapped the workflow in two scripts and wrote a full README with troubleshooting.</p>
+<p>Then came the part I couldn't script around.</p>
+<p>About twenty seconds into the first <em>online</em> launch on the new device, the restored profile collapsed. Same player ID, but coins and gems back to zero. The methodical narrowing: it wasn't the files (they always restored fine offline), it wasn't the package (same <code>com.ea.game.pvz2_na</code> build), it wasn't any file I could see. The reset only happened once the game talked to EA's servers.</p>
+<p>Here's what I finally understood: <strong>online progress is keyed to a per-install anonymous GUID</strong> that EA stores in the app's private storage — <code>/data/data/...</code>, a sandboxed folder <code>adb</code> can't reach without root. That GUID is the game's real identity to EA. My phone's GUID is known to the servers and carries my progress. Any other device boots with a <em>new</em> GUID, so the first time it syncs, the server takes the profile back to zero — the client file copy is ignored.</p>
+<p>So the project failed for a reason no tinkering could fix:</p>
+<ul>
+<li>The offline trick only delays it. An offline boot holds; the very next online boot on that device resets it.</li>
+<li>There's no in-game cloud/account icon in this version to attach an EA account instead.</li>
+<li>The last resort — an EA support ticket asking them to link my email to the anonymous GUID — may or may not come back.</li>
+</ul>
+<p>I'm keeping the repo, but I've stopped calling it a solution. The README now says plainly: <em>&quot;online progress is keyed to a per-install anonymous GUID; online-boot reset on a different device is not file-fixable.&quot;</em> I also got a genuinely nice artifact out of it — a fully decoded profile snapshot, with coordinates of the contract between &quot;your files&quot; and &quot;their servers.&quot;</p>
+<p>Three takeaways, in order of value:</p>
+<ol>
+<li><strong>Document the wall, not just the work.</strong> The final README — written after the failure — is more useful than the code that preceded it.</li>
+<li><strong>The interesting boundary isn't always the file format.</strong> It can be the identity layer above it.</li>
+<li><strong>Failed small projects still teach the most per hour.</strong> This one cost an evening and gave me the clearest picture I've had of how &quot;your save&quot; relates to &quot;their cloud.&quot;</li>
+</ol>
+<p>And for what it's worth, the lesson transfers: any offline-first tool that later meets a server that asserts its own truth about <em>who you are</em> will behave exactly like this. Epic, Valve, EA — the mechanics are always the same. Your files are what you get to keep; the id is what they get to keep.</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/cerfly" target="_blank" rel="noopener">GitHub</a>
+            <a href="mailto:hello@cerfly.net">Email</a>
+        </div>
+        <p>&copy; 2026 cerfly.net</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
