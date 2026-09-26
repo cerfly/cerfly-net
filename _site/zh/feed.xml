@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>cerfly.net — 中文博客</title>
+  <subtitle>来自 cerfly 的诚实进展：学习、建造与思考。</subtitle>
+  <link href="https://cerfly.net/zh/blog.html" rel="alternate" type="text/html"/>
+  <link href="https://cerfly.net/zh/feed.xml" rel="self" type="application/atom+xml"/>
+  <id>https://cerfly.net/zh/</id>
+  <updated>2026-09-24T00:00:00.000Z</updated>
+  <author>
+    <name>cerfly</name>
+  </author>
+  <entry>
+    <title>三天就够了</title>
+    <link href="https://cerfly.net/posts/three-days-are-enough.html" rel="alternate" type="text/html"/>
+    <id>https://cerfly.net/posts/three-days-are-enough.html</id>
+    <published>2026-09-24T00:00:00.000Z</published>
+    <updated>2026-09-24T00:00:00.000Z</updated>
+    <category term="Mindset"/>
+    <summary type="html">明天中秋，三天假，一个人过。同事们靠调休拼出十三天连休，我却没跟——不是立场，是真的累了：不想拿一堆散假去换一截更疲惫的工作日。这三天没有安排，却格外完整。三天改变不了什么，只盼周一回来时，脑子是清醒的。</summary>
+    <content type="html">&lt;p&gt;Tomorrow is Mid-Autumn Festival — the one holiday that&#39;s supposed to be about gathering. Three days off starting tomorrow, and I&#39;ll spend them alone, away from home.&lt;/p&gt;
+&lt;p&gt;Most of my colleagues are doing the 调休 shuffle. 调休 — literally &amp;quot;adjusted rest&amp;quot; — is how Chinese holidays turn into long stretches: to make a festival feel bigger, you move rest days around and pay the borrowed time back later with weekend work, often taking a few personal days to bridge the gaps. My colleagues bridged all three breaks — the Mid-Autumn days, three more via 调休, and the National Day week — into one straight run of thirteen days off.&lt;/p&gt;
+&lt;p&gt;I didn&#39;t. Not out of principle, exactly — out of tiredness. The whole game felt like it cost more than it bought: trading little half-days, shuffling the calendar, then repaying the debt with long, drained stretches of work afterwards. When one long block finally ends, there&#39;s the quiet reckoning — falling back into the routine with a sigh. What I wanted this week wasn&#39;t more days. It was a clearer head.&lt;/p&gt;
+&lt;p&gt;So here I am: three days, no plans, no commute, no one else&#39;s schedule. On paper it&#39;s smaller than thirteen. But it&#39;s mine in a way the big stretch wouldn&#39;t have been — unhurried, quiet, free to be filled with nothing at all.&lt;/p&gt;
+&lt;p&gt;Three days won&#39;t change my life. I just want a clear head when Monday comes. Happy Mid-Autumn.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cerfly.net/zh/blog.html"&gt;全部文章 &amp;rarr;&lt;/a&gt; · &lt;a href="https://cerfly.net/posts/how-i-built-this-site.html"&gt;阅读第一篇文章&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+</feed>

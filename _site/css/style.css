@@ -621,3 +621,18 @@ footer .socials a:hover {
         font-size: 0.9rem;
     }
 }
+/* Homepage latest posts */
+.home-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 5% 4rem;
+    width: 100%;
+}
+
+.home-section .post-card:first-child {
+    margin-top: 0;
+}
+
+.section-more {
+    margin-top: 1.5rem;
+}

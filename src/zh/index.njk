@@ -19,3 +19,22 @@ permalink: /zh/
                 <a href="/zh/now.html" class="btn btn-outline">最近在忙什么</a>
             </div>
         </section>
+        <section class="home-section">
+            <div class="section-header">
+                <h2>最新文章</h2>
+                <div class="line"></div>
+            </div>
+            <div class="blog-posts">
+                {%- for post in collections.post | reverse %}
+                {%- if loop.index <= 3 %}
+                <article class="post-card">
+                    <h2><a href="{{ post.url }}">{{ post.data.zhTitle or post.data.title }}</a></h2>
+                    <p class="post-meta">{{ post.date | dateZh }} &middot; {{ post.data.zhCategory or post.data.category }}</p>
+                    <p>{{ post.data.zhExcerpt or post.data.excerpt }}</p>
+                    <p><a class="read-more" href="{{ post.url }}">阅读原文 &rarr;</a></p>
+                </article>
+                {%- endif %}
+                {%- endfor %}
+            </div>
+            <p class="section-more"><a class="read-more" href="/zh/blog.html">查看全部文章 &rarr;</a></p>
+        </section>

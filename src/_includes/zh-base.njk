@@ -8,6 +8,7 @@
     <meta name="description" content="{{ description }}">
     <link rel="canonical" href="https://cerfly.net{{ page.url }}">
     <link rel="alternate" type="application/atom+xml" title="cerfly.net — Blog" href="/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="cerfly.net — 中文博客" href="/zh/feed.xml">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     {% if noindex %}<meta name="robots" content="noindex">{% endif %}
     {% if not noindex %}
@@ -15,9 +16,11 @@
     <meta property="og:title" content="{{ ogTitle or title }}">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:url" content="https://cerfly.net{{ page.url }}">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://cerfly.net/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ twitterTitle or ogTitle or title }}">
     <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="https://cerfly.net/assets/og-image.png">
     {% endif %}
 </head>
 <body>

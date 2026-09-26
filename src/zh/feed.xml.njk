@@ -1,0 +1,28 @@
+---
+permalink: /zh/feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>cerfly.net — 中文博客</title>
+  <subtitle>来自 cerfly 的诚实进展：学习、建造与思考。</subtitle>
+  <link href="https://cerfly.net/zh/blog.html" rel="alternate" type="text/html"/>
+  <link href="https://cerfly.net/zh/feed.xml" rel="self" type="application/atom+xml"/>
+  <id>https://cerfly.net/zh/</id>
+  <updated>{{ (collections.post | last).date | dateISO }}</updated>
+  <author>
+    <name>cerfly</name>
+  </author>
+  {%- set post = collections.post | reverse | first %}
+  {%- set oldest = collections.post | first %}
+  <entry>
+    <title>{{ (post.data.zhTitle or post.data.title) | escape }}</title>
+    <link href="https://cerfly.net{{ post.url }}" rel="alternate" type="text/html"/>
+    <id>https://cerfly.net{{ post.url }}</id>
+    <published>{{ post.date | dateISO }}</published>
+    <updated>{{ post.date | dateISO }}</updated>
+    <category term="{{ post.data.category | escape }}"/>
+    <summary type="html">{{ (post.data.zhExcerpt or post.data.excerpt) | escape }}</summary>
+    <content type="html">{{ post.templateContent | escape }}&lt;p&gt;&lt;a href="https://cerfly.net/zh/blog.html"&gt;全部文章 &amp;rarr;&lt;/a&gt; · &lt;a href="https://cerfly.net{{ oldest.url }}"&gt;阅读第一篇文章&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+</feed>
