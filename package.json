@@ -4,7 +4,7 @@
   "description": "Personal website of cerfly — a self-taught developer learning by building.",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
+    "build": "node scripts/generate-og.js && eleventy",
     "serve": "eleventy --serve"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/cerfly/cerfly-net#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.6",
+    "sharp": "^0.35.4"
   }
 }

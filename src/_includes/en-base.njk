@@ -15,12 +15,20 @@
     <meta property="og:title" content="{{ ogTitle or title }} — cerfly">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:url" content="https://cerfly.net{{ page.url }}">
+    {% if layout == 'post.njk' %}
+    <meta property="og:image" content="https://cerfly.net/assets/og-posts/{{ page.fileSlug }}.png">
+    {% else %}
     <meta property="og:image" content="https://cerfly.net/assets/og-image.png">
+    {% endif %}
     {% if layout == 'post.njk' %}<meta property="article:published_time" content="{{ date | dateISO }}">{% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ twitterTitle or ogTitle or title }} — cerfly">
     <meta name="twitter:description" content="{{ description }}">
+    {% if layout == 'post.njk' %}
+    <meta name="twitter:image" content="https://cerfly.net/assets/og-posts/{{ page.fileSlug }}.png">
+    {% else %}
     <meta name="twitter:image" content="https://cerfly.net/assets/og-image.png">
+    {% endif %}
     {% endif %}
 </head>
 <body>
