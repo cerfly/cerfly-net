@@ -17,6 +17,10 @@ module.exports = function (eleventyConfig) {
         return `${y}-${m}-${d}`;
     });
 
+    eleventyConfig.addFilter('dateISO', (date) =>
+        new Date(date).toISOString()
+    );
+
     return {
         dir: {
             input: 'src',

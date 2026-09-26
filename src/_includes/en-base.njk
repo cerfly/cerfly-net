@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="/css/style.css">
     <meta name="description" content="{{ description }}">
     <link rel="canonical" href="https://cerfly.net{{ page.url }}">
+    <link rel="alternate" type="application/atom+xml" title="cerfly.net — Blog" href="/feed.xml">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     {% if noindex %}<meta name="robots" content="noindex">{% endif %}
     {% if not noindex %}
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="{% if layout == 'post.njk' %}article{% else %}website{% endif %}">
     <meta property="og:title" content="{{ ogTitle or title }} — cerfly">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:url" content="https://cerfly.net{{ page.url }}">
+    {% if layout == 'post.njk' %}<meta property="article:published_time" content="{{ date | dateISO }}">{% endif %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ twitterTitle or ogTitle or title }} — cerfly">
     <meta name="twitter:description" content="{{ description }}">
@@ -46,6 +48,7 @@
     <footer>
         <div class="socials">
             <a href="https://github.com/cerfly" target="_blank" rel="noopener">GitHub</a>
+            <a href="/feed.xml">RSS</a>
             <a href="mailto:hello@cerfly.net">Email</a>
         </div>
         <p>&copy; 2026 cerfly.net</p>

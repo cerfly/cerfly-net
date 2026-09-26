@@ -1,0 +1,28 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>cerfly.net — Be true to yourself</title>
+  <subtitle>Honest progress from cerfly: the things I'm learning, building, and thinking about.</subtitle>
+  <link href="https://cerfly.net/blog.html" rel="alternate" type="text/html"/>
+  <link href="https://cerfly.net/feed.xml" rel="self" type="application/atom+xml"/>
+  <id>https://cerfly.net/</id>
+  <updated>{{ (collections.post | last).date | dateISO }}</updated>
+  <author>
+    <name>cerfly</name>
+  </author>
+  {%- set post = collections.post | reverse | first %}
+  {%- set oldest = collections.post | first %}
+  <entry>
+    <title>{{ post.data.title | escape }}</title>
+    <link href="https://cerfly.net{{ post.url }}" rel="alternate" type="text/html"/>
+    <id>https://cerfly.net{{ post.url }}</id>
+    <published>{{ post.date | dateISO }}</published>
+    <updated>{{ post.date | dateISO }}</updated>
+    <category term="{{ post.data.category | escape }}"/>
+    <summary type="html">{{ post.data.excerpt | escape }}</summary>
+    <content type="html">{{ post.templateContent | escape }}&lt;p&gt;&lt;a href="https://cerfly.net/blog.html"&gt;All posts &amp;rarr;&lt;/a&gt; · &lt;a href="https://cerfly.net{{ oldest.url }}"&gt;Read the first post&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+</feed>
