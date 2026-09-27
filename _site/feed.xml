@@ -5,23 +5,23 @@
   <link href="https://cerfly.net/blog.html" rel="alternate" type="text/html"/>
   <link href="https://cerfly.net/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://cerfly.net/</id>
-  <updated>2026-09-24T00:00:00.000Z</updated>
+  <updated>2026-09-28T00:00:00.000Z</updated>
   <author>
     <name>cerfly</name>
   </author>
   <entry>
-    <title>Three Days Are Enough</title>
-    <link href="https://cerfly.net/posts/three-days-are-enough.html" rel="alternate" type="text/html"/>
-    <id>https://cerfly.net/posts/three-days-are-enough.html</id>
-    <published>2026-09-24T00:00:00.000Z</published>
-    <updated>2026-09-24T00:00:00.000Z</updated>
-    <category term="Mindset"/>
-    <summary type="html">Three days off, alone for Mid-Autumn, and why I skipped the 调休 shuffle into a thirteen-day run.</summary>
-    <content type="html">&lt;p&gt;Tomorrow is Mid-Autumn Festival — the one holiday that&#39;s supposed to be about gathering. Three days off starting tomorrow, and I&#39;ll spend them alone, away from home.&lt;/p&gt;
-&lt;p&gt;Most of my colleagues are doing the 调休 shuffle. 调休 — literally &amp;quot;adjusted rest&amp;quot; — is how Chinese holidays turn into long stretches: to make a festival feel bigger, you move rest days around and pay the borrowed time back later with weekend work, often taking a few personal days to bridge the gaps. My colleagues bridged all three breaks — the Mid-Autumn days, three more via 调休, and the National Day week — into one straight run of thirteen days off.&lt;/p&gt;
-&lt;p&gt;I didn&#39;t. Not out of principle, exactly — out of tiredness. The whole game felt like it cost more than it bought: trading little half-days, shuffling the calendar, then repaying the debt with long, drained stretches of work afterwards. When one long block finally ends, there&#39;s the quiet reckoning — falling back into the routine with a sigh. What I wanted this week wasn&#39;t more days. It was a clearer head.&lt;/p&gt;
-&lt;p&gt;So here I am: three days, no plans, no commute, no one else&#39;s schedule. On paper it&#39;s smaller than thirteen. But it&#39;s mine in a way the big stretch wouldn&#39;t have been — unhurried, quiet, free to be filled with nothing at all.&lt;/p&gt;
-&lt;p&gt;Three days won&#39;t change my life. I just want a clear head when Monday comes. Happy Mid-Autumn.&lt;/p&gt;
+    <title>Three Days With Muse</title>
+    <link href="https://cerfly.net/posts/three-days-with-muse.html" rel="alternate" type="text/html"/>
+    <id>https://cerfly.net/posts/three-days-with-muse.html</id>
+    <published>2026-09-28T00:00:00.000Z</published>
+    <updated>2026-09-28T00:00:00.000Z</updated>
+    <category term="Tech"/>
+    <summary type="html">Three days with Muse: how we work together, the fun bits, and three rules I&#39;ve learned.</summary>
+    <content type="html">&lt;p&gt;A friend told me about Muse three days ago. I tried it out of curiosity, expecting a chatbot. What I got feels closer to a colleague.&lt;/p&gt;
+&lt;p&gt;If you haven&#39;t met it: Muse is Meta&#39;s personal AI assistant. It chats like you&#39;d expect, but it also has its own computer — it can write code, browse the web, and connect to services like my music account.&lt;/p&gt;
+&lt;p&gt;We&#39;ve mostly worked on my blog — I describe what I want in plain words, it does the building, and I review everything before it goes live. My passwords stay mine; it never asked. When something broke, I pasted the error and we debugged it together until it worked.&lt;/p&gt;
+&lt;p&gt;The fun part surprised me. I asked it to design a share image, and I turned into an art director: several rejected drafts later, we landed on one we both liked. It never got tired or offended. Then I asked for something random from my music — it dug through my library and picked a song I&#39;d forgotten I loved. It couldn&#39;t actually press play, so we just sat with the recommendation.&lt;/p&gt;
+&lt;p&gt;Three days in, my rules are simple: describe the outcome, show the raw error, and give away as little access as needed. It does the tedious parts and shows its work. The keys it holds are scoped — and revocable.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://cerfly.net/blog.html"&gt;All posts &amp;rarr;&lt;/a&gt; · &lt;a href="https://cerfly.net/posts/how-i-built-this-site.html"&gt;Read the first post&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
