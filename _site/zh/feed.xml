@@ -16,12 +16,12 @@
     <published>2026-09-28T00:00:00.000Z</published>
     <updated>2026-09-28T00:00:00.000Z</updated>
     <category term="Tech"/>
-    <summary type="html">三天前开始用 Muse，本以为是个聊天机器人，用下来更像一位同事。我说人话提需求，它动手实现；我还当了一回美术指导，毙了好几稿分享图。心得三条：说清楚要什么，报错贴原文，权限能少则少。</summary>
-    <content type="html">&lt;p&gt;A friend told me about Muse three days ago. I tried it out of curiosity, expecting a chatbot. What I got feels closer to a colleague.&lt;/p&gt;
-&lt;p&gt;If you haven&#39;t met it: Muse is Meta&#39;s personal AI assistant. It chats like you&#39;d expect, but it also has its own computer — it can write code, browse the web, and connect to services like my music account.&lt;/p&gt;
+    <summary type="html">最近开始用 Muse，本以为是个聊天机器人，用下来更像一位同事。我说人话提需求，它动手实现；我还当了一回美术指导，毙了好几稿分享图。心得三条：说清楚要什么，报错贴原文，权限能少则少。</summary>
+    <content type="html">&lt;p&gt;I started trying Muse a few days ago. I tried it out of curiosity, expecting a chatbot. What I got feels closer to a colleague.&lt;/p&gt;
+&lt;p&gt;If you haven&#39;t met it: Muse is Meta&#39;s personal AI assistant. It chats like you&#39;d expect, but it also has its own computer — it can write code, browse the web, and connect to everyday services.&lt;/p&gt;
 &lt;p&gt;We&#39;ve mostly worked on my blog — I describe what I want in plain words, it does the building, and I review everything before it goes live. My passwords stay mine; it never asked. When something broke, I pasted the error and we debugged it together until it worked.&lt;/p&gt;
-&lt;p&gt;The fun part surprised me. I asked it to design a share image, and I turned into an art director: several rejected drafts later, we landed on one we both liked. It never got tired or offended. Then I asked for something random from my music — it dug through my library and picked a song I&#39;d forgotten I loved. It couldn&#39;t actually press play, so we just sat with the recommendation.&lt;/p&gt;
-&lt;p&gt;Three days in, my rules are simple: describe the outcome, show the raw error, and give away as little access as needed. It does the tedious parts and shows its work. The keys it holds are scoped — and revocable.&lt;/p&gt;
+&lt;p&gt;The fun part surprised me. I asked it to design a share image, and I turned into an art director: several rejected drafts later, we landed on one we both liked. It never got tired or offended. Then I asked for something random from my music — it dug through my playlists and picked a song I&#39;d forgotten I loved. It couldn&#39;t actually press play, so we just sat with the recommendation.&lt;/p&gt;
+&lt;p&gt;Three days in, my rules are simple: describe the outcome, show the raw error, and give away as little access as needed. It does the tedious parts and shows its work. What it can touch is limited — and I can take it back anytime.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://cerfly.net/zh/blog.html"&gt;全部文章 &amp;rarr;&lt;/a&gt; · &lt;a href="https://cerfly.net/posts/how-i-built-this-site.html"&gt;阅读第一篇文章&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
