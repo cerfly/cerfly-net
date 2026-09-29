@@ -5,23 +5,34 @@
   <link href="https://cerfly.net/zh/blog.html" rel="alternate" type="text/html"/>
   <link href="https://cerfly.net/zh/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://cerfly.net/zh/</id>
-  <updated>2026-09-28T00:00:00.000Z</updated>
+  <updated>2026-09-29T00:00:00.000Z</updated>
   <author>
     <name>cerfly</name>
   </author>
   <entry>
-    <title>和 Muse 相处的三天</title>
-    <link href="https://cerfly.net/posts/three-days-with-muse.html" rel="alternate" type="text/html"/>
-    <id>https://cerfly.net/posts/three-days-with-muse.html</id>
-    <published>2026-09-28T00:00:00.000Z</published>
-    <updated>2026-09-28T00:00:00.000Z</updated>
-    <category term="Tech"/>
-    <summary type="html">最近开始用 Muse，本以为是个聊天机器人，用下来更像一位同事。我说人话提需求，它动手实现；我还当了一回美术指导，毙了好几稿分享图。心得三条：说清楚要什么，报错贴原文，权限能少则少。</summary>
-    <content type="html">&lt;p&gt;I started trying Muse a few days ago. I tried it out of curiosity, expecting a chatbot. What I got feels closer to a colleague.&lt;/p&gt;
-&lt;p&gt;If you haven&#39;t met it: Muse is Meta&#39;s personal AI assistant. It chats like you&#39;d expect, but it also has its own computer — it can write code, browse the web, and connect to everyday services.&lt;/p&gt;
-&lt;p&gt;We&#39;ve mostly worked on my blog — I describe what I want in plain words, it does the building, and I review everything before it goes live. My passwords stay mine; it never asked. When something broke, I pasted the error and we debugged it together until it worked.&lt;/p&gt;
-&lt;p&gt;The fun part surprised me. I asked it to design a share image, and I turned into an art director: several rejected drafts later, we landed on one we both liked. It never got tired or offended. Then I asked for something random from my music — it dug through my playlists and picked a song I&#39;d forgotten I loved. It couldn&#39;t actually press play, so we just sat with the recommendation.&lt;/p&gt;
-&lt;p&gt;Three days in, my rules are simple: describe the outcome, show the raw error, and give away as little access as needed. It does the tedious parts and shows its work. What it can touch is limited — and I can take it back anytime.&lt;/p&gt;
+    <title>存档迁移（下）</title>
+    <link href="https://cerfly.net/posts/pvz2-migration-part-two.html" rel="alternate" type="text/html"/>
+    <id>https://cerfly.net/posts/pvz2-migration-part-two.html</id>
+    <published>2026-09-29T00:00:00.000Z</published>
+    <updated>2026-09-29T00:00:00.000Z</updated>
+    <category term="Projects"/>
+    <summary type="html">《植物大战僵尸2》存档迁移的下半部分：出生年份藏起了账号按钮，存档搬家成功，绑上邮箱联网几秒金币清零。下一步：把金币全换成植物升级，再导一次。</summary>
+    <content type="html">&lt;p&gt;The &lt;a href=&quot;/posts/pvz2-save-sync-failed.html&quot;&gt;last post&lt;/a&gt; ended with a failed sync. Here&#39;s what happened next, in order:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;The icons were hidden by a birth year.&lt;/strong&gt; Years ago I entered 2020 at install, so the game treated me as a child and hid every account button. A test profile with an adult year brought them back. The save was never broken — the door was just invisible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Moved to the new phone.&lt;/strong&gt; Exported the save with the adb script, imported it, verified offline. Profile intact.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Registered my email, went online, lost the coins.&lt;/strong&gt; Seconds after the first online launch, coins and gems dropped to zero. Plants, levels, everything else untouched. The email signed itself out on its own.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Same signature as the tablet failure.&lt;/strong&gt; Updated theory: coins and gems live on the server&#39;s per-account ledger, and my fresh registration opened one that said zero. The client copy is a suggestion; the server&#39;s word is law. Plants and progress live on the device, so the server has no say over them.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Verified the backup.&lt;/strong&gt; The repo copy is byte-identical to what I pushed — the phone can&#39;t alter it. Whatever happens next, the pre-migration state is safe.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;What&#39;s next:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Hold for a few days.&lt;/strong&gt; Nothing degrades by waiting. The old phone keeps its full balances, the new phone stays offline with the email signed out. Waiting keeps every option open — most importantly, the support ticket stays viable until I spend anything.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The spending spree.&lt;/strong&gt; On the old phone: screenshot the balances, then spend everything offline — coins into plant upgrades, gems into unlocks. This moves value from the part the server controls into the part I control. Then re-export, push, re-import to the new phone, and verify offline. After that, an empty wallet is all the server can zero.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decide on the email account.&lt;/strong&gt; Once there&#39;s no currency left to lose, re-linking it is low-risk and buys cloud backup for the progression. Or I leave it signed out and stay fully offline. Still undecided.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Done looks like:&lt;/strong&gt; the profile on the new phone, upgraded plants, no currency worth stealing, and a repo backup that actually restores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The lesson, sharpened from last time: your files are what you get to keep. Everything else is a negotiation — know which parts you&#39;re negotiating over before you sit down.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://cerfly.net/zh/blog.html"&gt;全部文章 &amp;rarr;&lt;/a&gt; · &lt;a href="https://cerfly.net/posts/how-i-built-this-site.html"&gt;阅读第一篇文章&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
