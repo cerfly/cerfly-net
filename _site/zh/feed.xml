@@ -5,34 +5,22 @@
   <link href="https://cerfly.net/zh/blog.html" rel="alternate" type="text/html"/>
   <link href="https://cerfly.net/zh/feed.xml" rel="self" type="application/atom+xml"/>
   <id>https://cerfly.net/zh/</id>
-  <updated>2026-09-29T00:00:00.000Z</updated>
+  <updated>2026-10-09T00:00:00.000Z</updated>
   <author>
     <name>cerfly</name>
   </author>
   <entry>
-    <title>存档迁移（下）</title>
-    <link href="https://cerfly.net/posts/pvz2-migration-part-two.html" rel="alternate" type="text/html"/>
-    <id>https://cerfly.net/posts/pvz2-migration-part-two.html</id>
-    <published>2026-09-29T00:00:00.000Z</published>
-    <updated>2026-09-29T00:00:00.000Z</updated>
-    <category term="Projects"/>
-    <summary type="html">《植物大战僵尸2》存档迁移的下半部分：出生年份藏起了账号按钮，存档搬家成功，绑上邮箱联网几秒金币清零。下一步：把金币全换成植物升级，再导一次。</summary>
-    <content type="html">&lt;p&gt;The &lt;a href=&quot;/posts/pvz2-save-sync-failed.html&quot;&gt;last post&lt;/a&gt; ended with a failed sync. Here&#39;s what happened next, in order:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;The icons were hidden by a birth year.&lt;/strong&gt; Years ago I entered 2020 at install, so the game treated me as a child and hid every account button. A test profile with an adult year brought them back. The save was never broken — the door was just invisible.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Moved to the new phone.&lt;/strong&gt; Exported the save with the adb script, imported it, verified offline. Profile intact.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Registered my email, went online, lost the coins.&lt;/strong&gt; Seconds after the first online launch, coins and gems dropped to zero. Plants, levels, everything else untouched. The email signed itself out on its own.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Same signature as the tablet failure.&lt;/strong&gt; Updated theory: coins and gems live on the server&#39;s per-account ledger, and my fresh registration opened one that said zero. The client copy is a suggestion; the server&#39;s word is law. Plants and progress live on the device, so the server has no say over them.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Verified the backup.&lt;/strong&gt; The repo copy is byte-identical to what I pushed — the phone can&#39;t alter it. Whatever happens next, the pre-migration state is safe.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;What&#39;s next:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Hold for a few days.&lt;/strong&gt; Nothing degrades by waiting. The old phone keeps its full balances, the new phone stays offline with the email signed out. Waiting keeps every option open — most importantly, the support ticket stays viable until I spend anything.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The spending spree.&lt;/strong&gt; On the old phone: screenshot the balances, then spend everything offline — coins into plant upgrades, gems into unlocks. This moves value from the part the server controls into the part I control. Then re-export, push, re-import to the new phone, and verify offline. After that, an empty wallet is all the server can zero.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Decide on the email account.&lt;/strong&gt; Once there&#39;s no currency left to lose, re-linking it is low-risk and buys cloud backup for the progression. Or I leave it signed out and stay fully offline. Still undecided.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Done looks like:&lt;/strong&gt; the profile on the new phone, upgraded plants, no currency worth stealing, and a repo backup that actually restores.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The lesson, sharpened from last time: your files are what you get to keep. Everything else is a negotiation — know which parts you&#39;re negotiating over before you sit down.&lt;/p&gt;
+    <title>八天半的假期</title>
+    <link href="https://cerfly.net/posts/eight-and-a-half-days-home.html" rel="alternate" type="text/html"/>
+    <id>https://cerfly.net/posts/eight-and-a-half-days-home.html</id>
+    <published>2026-10-09T00:00:00.000Z</published>
+    <updated>2026-10-09T00:00:00.000Z</updated>
+    <category term="Mindset"/>
+    <summary type="html">请了半天假，国庆凑出八天半，全在家里。在外地工作、一个月才回一次，这次最好的部分恰恰是最无聊的部分：孩子吵吵闹闹，家里按自己的节奏运转，我只是待在里面，而不是&quot;回来看看&quot;。</summary>
+    <content type="html">&lt;p&gt;Eight and a half days home. I took half a day off and stretched the National Day week as far as it would go.&lt;/p&gt;
+&lt;p&gt;By the middle of it I was tired, and I felt bad about admitting that. Nothing exhausting happened — just a lot of being around people. Meals, visits, conversations. All good things, and somehow still draining. Wanting to be home was never about being surrounded every hour, but it took me a few days to stop feeling guilty for needing the quiet parts too.&lt;/p&gt;
+&lt;p&gt;Most of the time I just hung around with my family — my kid, my parents. Nothing worth reporting. I work far away and get back about once a month, so there&#39;s always this pressure in my head to make the days count. But the part I liked best was the boring part: my kid being loud, the house running on its own rhythm, me just being in it instead of visiting it. That&#39;s what I miss when I&#39;m away. Not big moments — just normal days I don&#39;t get to see.&lt;/p&gt;
+&lt;p&gt;Eight and a half days won&#39;t change anything. But I didn&#39;t spend them waiting to go back, and that felt like enough.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://cerfly.net/zh/blog.html"&gt;全部文章 &amp;rarr;&lt;/a&gt; · &lt;a href="https://cerfly.net/posts/how-i-built-this-site.html"&gt;阅读第一篇文章&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
